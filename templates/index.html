@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    {% load pwa %}
+    {% progressive_web_app_meta %}
+    <link rel="manifest" href="manifest.json">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJANGO NIH BRO</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            background-color: rgb(1, 1, 41);
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+        }
+        .container h1{
+            color: white;
+            text-align: center;
+            margin-top: 50px;
+            font-size: 200px;
+        }
+        .container img{
+            width: 900px;
+            position: absolute;
+            left: 14%;
+            top: 14%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello Django</h1>
+        <img src="{% static 'images/anim_asset.gif' %}" alt="anim" >
+    </div>
+    
+</body>
+</html>
